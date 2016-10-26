@@ -4,6 +4,7 @@ public class node {
 
 	private int data;
 	private node next;
+	private node previous;
 
 
 public node()
