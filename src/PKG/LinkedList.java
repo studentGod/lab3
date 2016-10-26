@@ -30,6 +30,7 @@ public class LinkedList {
  }
   
 
+
 public void deletNode(int num)
 {
 	if(head==null)
@@ -92,6 +93,7 @@ public void deletNode(int num)
 	 }
 	 }
  }
+ 
  
 public void print()
 {
