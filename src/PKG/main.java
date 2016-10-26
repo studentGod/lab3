@@ -8,7 +8,17 @@ public class main {
 		// TODO Auto-generated method stub
 		
 		LinkedList li=new LinkedList();
-		int k=1;
+		
+		
+		
+		li.addNodeBack(4);
+		li.addNodeBack(3);
+		li.addNodeBack(1);
+		li.addNodeBefore(44);
+		li.addNodeBefore(11);
+		li.print();
+		
+		/*int k=1;
 		
 		while(k==1||k==2||k==3||k==4)
 		{
@@ -51,7 +61,7 @@ public class main {
 			default:
 				System.out.println("Exit the program");
 			}
-		}
+	}*/
 		
 
 	}

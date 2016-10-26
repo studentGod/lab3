@@ -13,19 +13,39 @@ public class LinkedList {
  }
  
 
- public void addNode(int num)
+ public void addNodeBack(int num)
  {
- 	node newNode=new node(num,null);
- 	
+	 node newNode=new node(num,null,null);
+
  	if(head==null)
  	{
+ 		
  		head=newNode;
  		tail=newNode;
+ 		size++;
  	}
  	else
  	{
  		tail.setNext(newNode);
  		tail=newNode;
+ 	}
+ }
+ 
+ public void addNodeBefore(int num)
+ {
+	 node newNode=new node(num,head,null);
+
+ 	if(head==null)
+ 	{
+ 		
+ 		head=newNode;
+ 		tail=newNode;
+ 		size++;
+ 	}
+ 	else
+ 	{
+ 		head.setPrevious(newNode);
+ 		head=newNode;
  	}
  }
   
