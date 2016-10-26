@@ -11,12 +11,14 @@ public node()
 {
 	this.data=0;
 	this.next=null;
+	this.previous=null;
 }
 
-public node(int data1, node next1)
+public node(int data1, node next1, node previous1)
 {
 	data=data1;
 	next=next1;
+	previous=previous1;
 }
 	
 public int getData()
@@ -29,6 +31,11 @@ public void setNext(node n)
 	next=n;
 }
 
+public void setPrevious(node n)
+{
+	previous=n;
+}
+
 public void setData(int data1)
 {
 	data=data1;
@@ -37,6 +44,11 @@ public void setData(int data1)
 public node getNext()
 {
 	return this.next;
+}
+
+public node getPrevious()
+{
+	return this.previous;
 }
 
 }
