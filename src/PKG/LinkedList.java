@@ -3,7 +3,7 @@ package PKG;
 public class LinkedList {
  private node head;
  private node tail;
- private int size;
+ private int size=0;
  
  public LinkedList()
  {
@@ -12,22 +12,23 @@ public class LinkedList {
 	 size=0;		 
  }
  
-public void addNode(int num)
-{
-	node newNode=new node(num,null);
-	
-	if(head==null)
-	{
-		head=newNode;
-		tail=newNode;
-	}
-	else
-	{
-		tail.setNext(newNode);
-		tail=newNode;
-	}
-}
- 
+
+ public void addNode(int num)
+ {
+ 	node newNode=new node(num,null);
+ 	
+ 	if(head==null)
+ 	{
+ 		head=newNode;
+ 		tail=newNode;
+ 	}
+ 	else
+ 	{
+ 		tail.setNext(newNode);
+ 		tail=newNode;
+ 	}
+ }
+  
 
 public void deletNode(int num)
 {
