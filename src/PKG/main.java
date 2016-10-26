@@ -17,6 +17,8 @@ public class main {
 		li.addNodeBefore(44);
 		li.addNodeBefore(11);
 		li.print();
+		li.deletNode(1);
+		li.print();
 		
 		/*int k=1;
 		

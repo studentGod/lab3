@@ -15,7 +15,7 @@ public class LinkedList {
 
  public void addNodeBack(int num)
  {
-	 node newNode=new node(num,null,null);
+	 node newNode=new node(num,null,tail);
 
  	if(head==null)
  	{
@@ -26,6 +26,7 @@ public class LinkedList {
  	}
  	else
  	{
+ 		
  		tail.setNext(newNode);
  		tail=newNode;
  	}
@@ -74,7 +75,15 @@ public void deletNode(int num)
 			}
 			if(temp.getNext()!=null)
 			{
-			temp.setNext(temp.getNext().getNext());
+				if(temp.getNext()!=tail)
+				{
+					temp.setNext(temp.getNext().getNext());
+					temp.getNext().getNext().setPrevious(temp);
+				}
+				else{
+					tail=temp;
+					tail.setNext(null);
+				}
 			}
 			else{
 				System.out.println("Can not find the node");
@@ -123,6 +132,18 @@ public void deletNode(int num)
  	{
  		System.out.println(temp.getData());
  		temp=temp.getNext();
+ 	}
+ }
+ 
+ public void printFromTail()
+ {
+ 	node temp=tail;
+ 	
+ 	System.out.println("The linked list is: ");
+ 	while(temp!=null)
+ 	{
+ 		System.out.println(temp.getData());
+ 		temp=temp.getPrevious();
  	}
  }
   
