@@ -94,19 +94,18 @@ public void deletNode(int num)
 	 }
  }
  
- 
-public void print()
-{
-	node temp=head;
-	
-	System.out.println("The linked list is: ");
-	while(temp!=null)
-	{
-		System.out.println(temp.getData());
-		temp=temp.getNext();
-	}
-}
- 
+ public void print()
+ {
+ 	node temp=head;
+ 	
+ 	System.out.println("The linked list is: ");
+ 	while(temp!=null)
+ 	{
+ 		System.out.println(temp.getData());
+ 		temp=temp.getNext();
+ 	}
+ }
+  
  
  
 }
